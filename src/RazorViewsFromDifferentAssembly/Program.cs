@@ -1,5 +1,5 @@
-using AspNetCoreMvcHtmx;
-using AspNetCoreMvcHtmx.Core;
+using RazorViewsFromDifferentAssembly;
+using RazorViewsFromDifferentAssembly.Core;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Serilog;
 using Serilog.Extensions.Logging;

@@ -4,6 +4,7 @@
     <attachedFolders>
       <Path>../../AspNetCoreMvcHtmxTemplate</Path>
       <Path>../../aspnet-core-htmx-vsa-template</Path>
+      <Path>../../aspnet-core-razor-view-from-assembly</Path>
     </attachedFolders>
     <explicitIncludes />
     <explicitExcludes />

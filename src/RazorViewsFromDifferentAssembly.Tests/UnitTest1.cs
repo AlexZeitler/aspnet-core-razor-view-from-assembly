@@ -1,4 +1,4 @@
-namespace AspNetCoreMvcHtmx.Tests;
+namespace RazorViewsFromDifferentAssembly.Tests;
 
 public class UnitTest1
 {
