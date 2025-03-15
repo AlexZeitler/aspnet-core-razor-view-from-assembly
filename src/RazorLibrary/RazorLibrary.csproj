@@ -40,6 +40,7 @@
           <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
           <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </Content>
+        <Content Include="_ViewImports.cshtml" />
     </ItemGroup>
 
 </Project>
