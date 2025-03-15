@@ -1,6 +1,9 @@
 using RazorViewsFromDifferentAssembly;
 using RazorViewsFromDifferentAssembly.Core;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
+using Microsoft.Extensions.FileProviders;
+using RazorLibrary.Features.AddNewCustomer;
 using Serilog;
 using Serilog.Extensions.Logging;
 
@@ -12,11 +15,17 @@ var logger = new SerilogLoggerFactory(Log.Logger)
 
 // Add services to the container.
 builder.Services.AddControllersWithViews()
-  .AddRazorRuntimeCompilation();
+  .AddApplicationPart(typeof(AddNewCustomerController).Assembly);
 
 builder.Services.Configure<RazorViewEngineOptions>(
   options => options.ViewLocationExpanders.Add(new FeatureFolderLocationExpander())
 );
+
+builder.Services.Configure<MvcRazorRuntimeCompilationOptions>(
+  options => options.FileProviders.Add(new EmbeddedFileProvider(typeof(AddNewCustomerController).Assembly))
+);
+
+builder.Services.Configure<RazorViewEngineOptions>(options => { });
 
 var app = builder.Build();
 
