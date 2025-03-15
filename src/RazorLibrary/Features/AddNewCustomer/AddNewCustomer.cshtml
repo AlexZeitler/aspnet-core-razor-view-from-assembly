@@ -1,5 +1,14 @@
 @model string
 
-@{ViewData["Title"] = "AddNewCustomer";}
+@{ ViewData["Title"] = "AddNewCustomer"; }
 
 <h1 class="text-red-500">Add New Customer</h1>
+
+<div id="target"></div>
+
+<button class="form-input"
+        hx-get
+        hx-controller="AddNewCustomer"
+        hx-action="GetTestForm"
+        hx-target="#target">Test
+</button>
