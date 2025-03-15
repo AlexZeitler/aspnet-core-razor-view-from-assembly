@@ -21,10 +21,6 @@ builder.Services.Configure<RazorViewEngineOptions>(
   options => options.ViewLocationExpanders.Add(new FeatureFolderLocationExpander())
 );
 
-builder.Services.Configure<MvcRazorRuntimeCompilationOptions>(
-  options => options.FileProviders.Add(new EmbeddedFileProvider(typeof(AddNewCustomerController).Assembly))
-);
-
 builder.Services.Configure<RazorViewEngineOptions>(options => { });
 
 var app = builder.Build();
