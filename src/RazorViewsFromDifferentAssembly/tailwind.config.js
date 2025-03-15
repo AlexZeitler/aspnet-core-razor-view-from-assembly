@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["**/*.{cshtml,js}"],
+  content: ["**/*.{cshtml,js}", "../RazorLibrary/**/*.{cshtml,js}"],
   safelist: [
     'input-validation-error'
   ],
